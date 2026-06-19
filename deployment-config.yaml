@@ -1,0 +1,16 @@
+stack:
+  name: ecr-demo-stack
+  region: us-east-1
+  template: infrastructure.yml
+  capabilities:
+    - CAPABILITY_NAMED_IAM
+
+parameters:
+  GitHubOrg: EugeneDokyeAnokye        # GitHub username / org that owns the repo
+  GitHubRepo: ecr-demo                # Repository name
+  ECRRepositoryName: eugene_ecr-demo  # Name used in ECR console
+
+tags:
+  Project: ECR-Lab
+  Environment: production
+  ManagedBy: CloudFormation
