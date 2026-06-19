@@ -14,6 +14,10 @@ Resources:
       RepositoryName: !Ref ECRRepositoryName
       ImageScanningConfiguration:
         ScanOnPush: true
+      EncryptionConfiguration:
+        EncryptionType: AES256
+      LifecyclePolicy:
+        LifecyclePolicyText: '{"rules":[{"rulePriority":1,"description":"Keep last 10 images","selection":{"tagStatus":"any","countType":"imageCountMoreThan","countNumber":10},"action":{"type":"expire"}}]}'
       Tags:
         - Key: Project
           Value: ECR-Lab
