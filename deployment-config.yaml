@@ -1,4 +1,4 @@
-template-file-path: ./ecr-cfn/infrastructure.yml
+template-file-path: ./infrastructure.yml
 parameters:
   - parameter-key: GitHubOrg
     parameter-value: EugeneDokyeAnokye
