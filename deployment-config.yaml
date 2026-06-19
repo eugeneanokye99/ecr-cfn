@@ -1,16 +1,15 @@
-stack:
-  name: ecr-demo-stack
-  region: eu-north-1
-  template: infrastructure.yml
-  capabilities:
-    - CAPABILITY_NAMED_IAM
-
+template-file-path: ./ecr-cfn/infrastructure.yml
 parameters:
-  GitHubOrg: EugeneDokyeAnokye        # GitHub username / org that owns the repo
-  GitHubRepo: ecr-demo                # Repository name
-  ECRRepositoryName: eugene_ecr-demo  # Name used in ECR console
-
+  - parameter-key: GitHubOrg
+    parameter-value: EugeneDokyeAnokye
+  - parameter-key: GitHubRepo
+    parameter-value: ecr-demo
+  - parameter-key: ECRRepositoryName
+    parameter-value: eugene_ecr-demo
 tags:
-  Project: ECR-Lab
-  Environment: production
-  ManagedBy: CloudFormation
+  - key: Project
+    value: ECR-Lab
+  - key: Environment
+    value: production
+  - key: ManagedBy
+    value: CloudFormation
