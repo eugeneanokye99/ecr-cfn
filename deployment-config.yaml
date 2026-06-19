@@ -1,3 +1,4 @@
-template-file-path: infrastructure.yaml
-parameters: {}
-tags: {}
+template-file-path: infrastructure.yml
+parameters:
+  - parameter-key: ECRRepositoryName
+    parameter-value: eugene_ecr-demo
