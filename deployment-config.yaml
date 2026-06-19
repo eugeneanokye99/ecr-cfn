@@ -1,6 +1,6 @@
 stack:
   name: ecr-demo-stack
-  region: us-east-1
+  region: eu-north-1
   template: infrastructure.yml
   capabilities:
     - CAPABILITY_NAMED_IAM
